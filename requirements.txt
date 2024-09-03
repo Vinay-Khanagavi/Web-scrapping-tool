@@ -1,0 +1,7 @@
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3          # To support BeautifulSoup for faster parsing
+python-dotenv==1.0.0 # For loading environment variables
+SQLAlchemy==2.0.21   # For database ORM functionality
+aiohttp==3.8.5       # For asynchronous HTTP requests
+playwright==1.39.0   # For handling dynamic web content
