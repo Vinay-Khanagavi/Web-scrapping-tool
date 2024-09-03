@@ -3,3 +3,41 @@
 2024-09-03 18:50:12,514:INFO:Found 0 vulnerability divs on https://me.n-able.com/s/security-advisory/aArHs000000M8CCKA0/cve202347131-passportal-browser-extension-logs-sensitive-data
 2024-09-03 18:50:14,228:INFO:Finished scraping. Found 0 vulnerabilities
 2024-09-03 18:50:14,228:INFO:No vulnerabilities found, no email sent.
+2024-09-03 18:56:24,645:INFO:Starting to scrape 1 URLs
+2024-09-03 18:56:25,820:INFO:Scraping URL: https://nvd.nist.gov/
+2024-09-03 18:56:35,900:INFO:Found 0 vulnerability divs on https://nvd.nist.gov/
+2024-09-03 18:56:37,630:INFO:Finished scraping. Found 0 vulnerabilities
+2024-09-03 18:56:37,631:INFO:No vulnerabilities found, no email sent.
+2024-09-03 18:58:29,007:INFO:Starting to scrape 3 URLs
+2024-09-03 18:58:30,231:INFO:Scraping URL: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+2024-09-03 18:58:30,240:INFO:Scraping URL: https://www.cve.org/
+2024-09-03 18:58:30,249:INFO:Scraping URL: https://www.atlassian.com/trust/security/advisories
+2024-09-03 18:59:02,193:ERROR:Error scraping https://www.cisa.gov/known-exploited-vulnerabilities-catalog: Page.goto: Timeout 30000ms exceeded.
+Call log:
+navigating to "https://www.cisa.gov/known-exploited-vulnerabilities-catalog", waiting until "networkidle"
+
+2024-09-03 18:59:02,207:ERROR:Error scraping https://www.atlassian.com/trust/security/advisories: Page.goto: Timeout 30000ms exceeded.
+Call log:
+navigating to "https://www.atlassian.com/trust/security/advisories", waiting until "networkidle"
+
+2024-09-03 18:59:02,208:ERROR:Error scraping https://www.cve.org/: Page.goto: Timeout 30000ms exceeded.
+Call log:
+navigating to "https://www.cve.org/", waiting until "networkidle"
+
+2024-09-03 18:59:04,615:INFO:Finished scraping. Found 0 vulnerabilities
+2024-09-03 18:59:04,615:INFO:No vulnerabilities found, no email sent.
+2024-09-03 19:03:49,334:INFO:Starting to scrape 2 URLs
+2024-09-03 19:03:50,627:INFO:Scraping URL: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+2024-09-03 19:03:50,637:INFO:Scraping URL: 
+2024-09-03 19:03:52,546:ERROR:Error scraping : Page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+navigating to "", waiting until "networkidle"
+
+2024-09-03 19:03:57,024:INFO:Found 0 vulnerability divs on https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+2024-09-03 19:03:58,761:INFO:Finished scraping. Found 0 vulnerabilities
+2024-09-03 19:03:58,762:INFO:No vulnerabilities found, no email sent.
+2024-09-03 19:08:27,942:INFO:Starting to scrape 1 URLs
+2024-09-03 19:08:29,169:INFO:Scraping URL: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+2024-09-03 19:08:49,134:INFO:Found 0 vulnerability rows on https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+2024-09-03 19:08:51,473:INFO:Finished scraping. Found 0 vulnerabilities
+2024-09-03 19:08:51,474:INFO:No vulnerabilities found, no email sent.

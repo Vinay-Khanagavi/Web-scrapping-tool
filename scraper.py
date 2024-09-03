@@ -64,22 +64,24 @@ class VulnerabilityScraper:
             content = await page.content()
             soup = BeautifulSoup(content, 'html.parser')
 
-            vulnerabilities = soup.find_all('div', class_='vulnerability')
-            logging.info(f"Found {len(vulnerabilities)} vulnerability divs on {url}")
+            # Updated selector for vulnerabilities
+            vulnerabilities = soup.find_all('tr', class_='vuln-list-row')
+            logging.info(f"Found {len(vulnerabilities)} vulnerability rows on {url}")
             
             for vuln in vulnerabilities:
                 try:
-                    severity = vuln.find('span', class_='severity').text
-                    if severity.lower() in ['critical', 'high']:
+                    severity = vuln.find('td', class_='views-field-field-cvss-v3-score').text.strip()
+                    cvss_score = float(severity)
+                    if cvss_score >= 7.0:  # High or Critical severity
                         self.vulnerabilities.append({
-                            'product_name': vuln.find('h2', class_='product-name').text,
-                            'product_version': vuln.find('span', class_='version').text or 'NA',
+                            'product_name': vuln.find('td', class_='views-field-field-product-s-affected').text.strip(),
+                            'product_version': 'NA',  # Not available in the current structure
                             'oem_name': self.extract_oem_name(url),
-                            'severity_level': severity,
-                            'vulnerability': vuln.find('p', class_='description').text,
-                            'mitigation_strategy': vuln.find('a', class_='mitigation')['href'],
-                            'published_date': datetime.strptime(vuln.find('span', class_='date').text, '%Y-%m-%d'),
-                            'unique_id': vuln.find('span', class_='cve').text
+                            'severity_level': 'High' if cvss_score >= 7.0 else 'Critical' if cvss_score >= 9.0 else 'Medium',
+                            'vulnerability': vuln.find('td', class_='views-field-field-vulnerability-name').text.strip(),
+                            'mitigation_strategy': vuln.find('td', class_='views-field-field-due-date').text.strip(),
+                            'published_date': datetime.strptime(vuln.find('td', class_='views-field-field-date-added').text.strip(), '%Y-%m-%d'),
+                            'unique_id': vuln.find('td', class_='views-field-field-cve-id').text.strip()
                         })
                         logging.info(f"Added vulnerability: {self.vulnerabilities[-1]['unique_id']}")
                 except Exception as e:
