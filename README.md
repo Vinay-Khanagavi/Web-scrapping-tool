@@ -6,3 +6,7 @@ Background: Critical Sector organisations uses a number of IT and OT equipment (
 ![image](https://github.com/user-attachments/assets/cbe69b5e-782f-4df9-a575-e497deff1f97)
 
 ![image](https://github.com/user-attachments/assets/15a0ea28-a081-45d1-a57b-8b40fbed59ce)
+
+![Screenshot 2024-09-04 102739](https://github.com/user-attachments/assets/0069f40e-a63e-46d8-b9ee-f7c2f5c7a7d3)
+
+![Screenshot 2024-09-04 103404](https://github.com/user-attachments/assets/1c001f1b-5be5-4fb9-b1ae-92f832ad4824)
